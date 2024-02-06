@@ -15,16 +15,3 @@ for /l %%t in (0,1,%~1) DO (
 
 pause>nul
 popd
-choice /C YN /N /M "Voce deseja deletar o data.hxd original?"
-if %errorlevel% == 2 (
-    call :no
-) else (
-    call :yes
-)
-
-:no
-exit
-
-:yes
-del data.hxd /q
-pause
